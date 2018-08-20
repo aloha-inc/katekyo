@@ -1,0 +1,21 @@
+
+
+<%= image_tag 'torai.jpg'%>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">会社詳細</a>
+  <% @brands.each do |brand| %>
+  <a href="#" class="list-group-item list-group-item-action">会社名：<%= brand.name %></a>
+  <a href="#" class="list-group-item list-group-item-action">対応授業：<%= brand.lesson %></a>
+  <a href="#" class="list-group-item list-group-item-action">対応学年<%= brand.target %></a>
+  <a href="#" class="list-group-item list-group-item-action disabled">1時間当たりの授業料：<%= brand.hourly_rate %>円から</a>
+  <% end %>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top"> <%= image_tag 'torai.jpg'%>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
