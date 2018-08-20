@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>登録スクール一覧</h1>
 <table>
   <tr>
@@ -12,12 +14,12 @@
 <% @schools.each do |school| %>
   <tr>
     <td> <%= school.name %>  </td>
-    <td><%= render 'schools/tag_list', tag_list: school.company_list %></td>
-    <td><%= render 'schools/tag_list', tag_list: school.purpose_list %></td>
-    <td><%= render 'schools/tag_list', tag_list: school.style_list %></td>
-    <td><%= render 'schools/tag_list', tag_list: school.status_list %></td>
-    <td><%= render 'schools/tag_list', tag_list: school.course_list %></td>
-    <td> <%= link_to 'Show', item %></td>
+    <td><%= render 'schools_tag_list', tag_list: school.company_list %></td>
+    <td><%= render 'schools_tag_list', tag_list: school.purpose_list %></td>
+    <td><%= render 'schools_tag_list', tag_list: school.style_list %></td>
+    <td><%= render 'schools_tag_list', tag_list: school.status_list %></td>
+    <td><%= render 'schools_tag_list', tag_list: school.course_list %></td>
+    <td> <%= link_to 'Show', school %></td>
     <td> <%= link_to 'Edit', edit_school_path(school) %></td>
     <td> <%= link_to 'Destroy', school,
     :confirm => 'Are you sure?',:method => :delete %></td>
