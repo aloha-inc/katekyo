@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+
+<div> 
+<%= form_tag(schools_path, method: "get") do %>
+<%= label_tag :name, "名前" %><%= text_field_tag :name, params[:name] %>
+<%= submit_tag "検索" %>
+<% end %>
+
+
+
+
+</div>
+
 <h1>登録スクール一覧</h1>
 <table>
   <tr>
@@ -27,7 +39,7 @@
 <% end %>
 </table>
  
-
+<button type="button" class="btn btn-secondary">Primary</button>
  
 <%= link_to 'New School', new_school_path %>
 
